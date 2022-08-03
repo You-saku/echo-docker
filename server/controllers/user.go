@@ -1,6 +1,5 @@
 package controllers
 
-// Todo: Cotent-Type application-jsonでやりたい
 import (
 	// echo
 	"net/http"

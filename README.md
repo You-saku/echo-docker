@@ -12,10 +12,12 @@ go run main.go
 ```
 
 ## Official Doc
-https://echo.labstack.com/
+ * [echo](https://echo.labstack.com/)
 
 ## Todo
-* imple Auth 
+* connect front-end.
+* manage migration.
+* transaction manage rdb.
 
 ## 個人メモ
 
@@ -26,8 +28,10 @@ https://echo.labstack.com/
  * [ファイル分割したときに参考になる](https://qiita.com/fetaro/items/31b02b940ce9ec579baf#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E3%81%AE%E5%86%85%E9%83%A8%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AEimport)
 
 ### gorm
- * リレーション
-    * [1対多](https://gorm.io/ja_JP/docs/has_many.html) 
+ * 参考
+   * [公式Doc](https://gorm.io/ja_JP/)
+   * リレーション
+      * [1対多](https://gorm.io/ja_JP/docs/has_many.html) 
 
 ### validate
  * 参考

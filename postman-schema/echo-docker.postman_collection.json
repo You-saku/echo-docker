@@ -1,22 +1,17 @@
 {
 	"info": {
-		"_postman_id": "6b3ba081-e9ae-489b-a00f-3a54cd6cba5d",
+		"_postman_id": "0df9a9bb-d167-489a-b0d4-a7051cf87ea9",
 		"name": "echo-docker",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "get",
+			"name": "sample",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "get(sample)",
-			"request": {
-				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -26,41 +21,6 @@
 							"language": "json"
 						}
 					}
-				},
-				"url": {
-					"raw": "http://localhost:80/api/user",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "80",
-					"path": [
-						"api",
-						"user"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "post",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "capy",
-							"type": "default"
-						},
-						{
-							"key": "email",
-							"value": "capy@example.com",
-							"type": "default"
-						}
-					]
 				},
 				"url": {
 					"raw": "http://localhost:80",
@@ -74,8 +34,18 @@
 			"response": []
 		},
 		{
-			"name": "api",
+			"name": "apiチェック",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -88,6 +58,67 @@
 					"path": [
 						"api",
 						"ok"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ログイン",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sample@example.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "you-saku",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "yousaku@example.com",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -163,6 +194,16 @@
 				}
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
